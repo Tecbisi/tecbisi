@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="title">Portfolio | Web Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0da3b4b.js" crossorigin="anonymous"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; line-height: 1.6; background: #f9f9f9; color: #333; }
+
+    header {
+      background: linear-gradient(to right, #4f46e5, #3b82f6);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .lang-select {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .lang-select button {
+      margin: 0 5px;
+      padding: 5px 10px;
+      background: #fff;
+      border: none;
+      border-radius: 4px;
+      color: #3b82f6;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    header h1 { font-size: 2.5rem; }
+    header p { margin: 10px 0; font-size: 1.2rem; }
+
+    .cta-buttons a {
+      display: inline-block;
+      margin: 15px 10px;
+      padding: 12px 25px;
+      background: #fff;
+      color: #3b82f6;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .cta-buttons a:hover { background: #e0e7ff; }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 { margin-bottom: 20px; color: #111; }
+
+    .services, .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .card i { font-size: 2rem; color: #4f46e5; margin-bottom: 10px; }
+
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .pricing-table th, .pricing-table td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .pricing-table th { background: #e0e7ff; }
+
+    .testimonial {
+      font-style: italic;
+      margin: 10px 0;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .contact-form button {
+      background: #3b82f6;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #2563eb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.9rem;
+      background: #f3f4f6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="lang-select">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('fr')">FR</button>
+      <button onclick="setLanguage('it')">IT</button>
+    </div>
+    <h1 data-i18n="hero_title">Beautiful Websites for Small Businesses</h1>
+    <p data-i18n="hero_sub">Fast. Mobile-Friendly. SEO-Optimized.</p>
+    <div class="cta-buttons">
+      <a href="#contact" data-i18n="book_call">📞 Book a Free Call</a>
+      <a href="#contact" data-i18n="contact_me">📧 Contact Me</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2 data-i18n="about_title">👋 About Me</h2>
+    <p data-i18n="about_text">
+      Hi, I'm <strong>[Your Name]</strong> — a freelance website builder helping small businesses grow online. I specialize in creating clean, modern, and responsive websites using WordPress, HTML/CSS, and other modern tools.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2 data-i18n="services_title">🛠️ Services & Packages</h2>
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th data-i18n="package">Package</th>
+          <th data-i18n="features">Features</th>
+          <th data-i18n="price">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>💡 <span data-i18n="starter">Starter</span></td>
+          <td data-i18n="starter_features">1-page site, contact form, mobile-friendly</td>
+          <td>$150</td>
+        </tr>
+        <tr>
+          <td>🚀 <span data-i18n="standard">Standard</span></td>
+          <td data-i18n="standard_features">3–5 pages, SEO, social media links</td>
+          <td>$300</td>
+        </tr>
+        <tr>
+          <td>🛒 <span data-i18n="ecommerce">E-commerce</span></td>
+          <td data-i18n="ecommerce_features">Online store, payments, product setup</td>
+          <td>$500+</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="portfolio">
+    <h2 data-i18n="portfolio_title">📂 Portfolio</h2>
+    <div class="portfolio">
+      <div class="card">
+        <i class="fas fa-cut"></i>
+        <h3>SalonOne</h3>
+        <p data-i18n="portfolio_1">3-page beauty salon site</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-dumbbell"></i>
+        <h3>FitnessPro</h3>
+        <p data-i18n="portfolio_2">Landing page with booking form</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-utensils"></i>
+        <h3>Restaurant Starter</h3>
+        <p data-i18n="portfolio_3">Menu, gallery, and contact form</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2 data-i18n="testimonials_title">❤️ Testimonials</h2>
+    <p class="testimonial" data-i18n="testimonial_1">“The website [Your Name] built for my bakery is amazing — clean, fast, and helped us get more customers online.” — Sarah</p>
+    <p class="testimonial" data-i18n="testimonial_2">“I had no idea what I needed. He guided me step-by-step and delivered something better than I imagined.” — Jamal</p>
+  </section>
+
+  <section id="contact">
+    <h2 data-i18n="contact_title">📩 Let's Work Together</h2>
+    <p data-i18n="contact_text">Email me at: <strong>youremail@example.com</strong> or use the form below:</p>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Tell me about your project..."></textarea>
+      <button type="submit" data-i18n="send">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 [Your Name] | Web Design Portfolio. All rights reserved.
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        title: "Portfolio | Web Designer",
+        hero_title: "Beautiful Websites for Small Businesses",
+        hero_sub: "Fast. Mobile-Friendly. SEO-Optimized.",
+        book_call: "📞 Book a Free Call",
+        contact_me: "📧 Contact Me",
+        about_title: "👋 About Me",
+        about_text: "Hi, I'm [Your Name] — a freelance website builder helping small businesses grow online. I specialize in creating clean, modern, and responsive websites using WordPress, HTML/CSS, and other modern tools.",
+        services_title: "🛠️ Services & Packages",
+        package: "Package", features: "Features", price: "Price",
+        starter: "Starter", starter_features: "1-page site, contact form, mobile-friendly",
+        standard: "Standard", standard_features: "3–5 pages, SEO, social media links",
+        ecommerce: "E-commerce", ecommerce_features: "Online store, payments, product setup",
+        portfolio_title: "📂 Portfolio",
+        portfolio_1: "3-page beauty salon site",
+        portfolio_2: "Landing page with booking form",
+        portfolio_3: "Menu, gallery, and contact form",
+        testimonials_title: "❤️ Testimonials",
+        testimonial_1: "“The website [Your Name] built for my bakery is amazing — clean, fast, and helped us get more customers online.” — Sarah",
+        testimonial_2: "“I had no idea what I needed. He guided me step-by-step and delivered something better than I imagined.” — Jamal",
+        contact_title: "📩 Let's Work Together",
+        contact_text: "Email me at: youremail@example.com or use the form below:",
+        send: "Send Message"
+      },
+      fr: {
+        title: "Portfolio | Concepteur de sites web",
+        hero_title: "Des sites web modernes pour les petites entreprises",
+        hero_sub: "Rapide. Adapté au mobile. Optimisé SEO.",
+        book_call: "📞 Réserver un appel gratuit",
+        contact_me: "📧 Me contacter",
+        about_title: "👋 À propos de moi",
+        about_text: "Bonjour, je suis [Votre nom] — un concepteur de sites freelance qui aide les petites entreprises à se développer en ligne.",
+        services_title: "🛠️ Services & Tarifs",
+        package: "Forfait", features: "Caractéristiques", price: "Prix",
+        starter: "Démarrage", starter_features: "1 page, formulaire de contact, responsive",
+        standard: "Standard", standard_features: "3–5 pages, SEO, réseaux sociaux",
+        ecommerce: "Boutique", ecommerce_features: "Boutique en ligne, paiements, produits",
+        portfolio_title: "📂 Portfolio",
+        portfolio_1: "Site salon de beauté 3 pages",
+        portfolio_2: "Page d'accueil avec formulaire de réservation",
+        portfolio_3: "Menu, galerie et contact",
+        testimonials_title: "❤️ Témoignages",
+        testimonial_1: "“Le site que [Votre nom] a créé est superbe — rapide, moderne et efficace.” — Sarah",
+        testimonial_2: "“Il m'a accompagné tout au long et le résultat a dépassé mes attentes.” — Jamal",
+        contact_title: "📩 Travaillons ensemble",
+        contact_text: "Envoyez-moi un email : youremail@example.com ou utilisez le formulaire :",
+        send: "Envoyer"
+      },
+      it: {
+        title: "Portfolio | Web Designer",
+        hero_title: "Siti Web Moderni per Piccole Imprese",
+        hero_sub: "Veloce. Mobile. Ottimizzato SEO.",
+        book_call: "📞 Prenota una chiamata gratuita",
+        contact_me: "📧 Contattami",
+        about_title: "👋 Su di me",
+        about_text: "Ciao, sono [Il tuo nome] — un web designer freelance che aiuta le piccole imprese a crescere online.",
+        services_title: "🛠️ Servizi e Pacchetti",
+        package: "Pacchetto", features: "Funzionalità", price: "Prezzo",
+        starter: "Iniziale", starter_features: "1 pagina, modulo contatto, mobile",
+        standard: "Standard", standard_features: "3–5 pagine, SEO, social media",
+        ecommerce: "E-commerce", ecommerce_features: "Negozio online, pagamenti, prodotti",
+        portfolio_title: "📂 Portfolio",
+        portfolio_1: "Sito per salone di bellezza (3 pagine)",
+        portfolio_2: "Landing page con prenotazione",
+        portfolio_3: "Menù, galleria e contatti",
+        testimonials_title: "❤️ Testimonianze",
+        testimonial_1: "“Il sito che [Il tuo nome] ha realizzato per la mia pasticceria è fantastico.” — Sarah",
+        testimonial_2: "“Mi ha guidato passo dopo passo, con un risultato superiore alle aspettative.” — Jamal",
+        contact_title: "📩 Lavoriamo insieme",
+        contact_text: "Scrivimi a: youremail@example.com o usa il modulo:",
+        send: "Invia messaggio"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+    }
+
+    setLanguage('en'); // default
+  </script>
+</body>
+</html>
